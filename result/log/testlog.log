@@ -1,0 +1,21 @@
+2014-10-11 16:12:27 [main]-[INFO] RetryCount=0
+2014-10-11 16:12:27 [main]-[INFO] SourceDir=src/test/java/
+2014-10-11 16:12:27 [main]-[INFO] SourceEncoding=UTF-8
+2014-10-11 16:12:30 [TestNG]-[INFO] Launch [chrome] successfully
+2014-10-11 16:12:32 [TestNG]-[INFO] updateStatus test case start running
+2014-10-11 16:12:32 [TestNG]-[INFO] founded the element [By.id: searchByNameOrId] and operate it
+2014-10-11 16:12:33 [TestNG]-[INFO] founded the element [By.xpath: //button[@class='btn btn-primary upper j_searchProd']] and operate it
+2014-10-11 16:12:34 [TestNG]-[INFO] founded the element [By.xpath: //button[@class='btn btn-primary upper j_updateStatus']] and operate it
+2014-10-11 16:12:35 [TestNG]-[INFO] founded the element [By.className: modal-body] and operate it
+2014-10-11 16:12:35 [TestNG]-[INFO] Expected [please select at least one product!] and founded [please select at least one product!]
+2014-10-11 16:12:35 [TestNG]-[INFO] founded the element [By.xpath: //button[text()='confirm']] and operate it
+2014-10-11 16:12:36 [TestNG]-[INFO] Wait [1000] ms
+2014-10-11 16:12:36 [TestNG]-[INFO] founded the element [By.className: j_selectAll] and operate it
+2014-10-11 16:12:36 [TestNG]-[INFO] founded the element [By.xpath: //button[@class='btn btn-primary upper j_updateStatus']] and operate it
+2014-10-11 16:12:37 [TestNG]-[INFO] founded the element [By.id: ProductStatus_newStatus] and operate it
+2014-10-11 16:12:37 [TestNG]-[INFO] founded the element [By.xpath: //input[@id='ProductStatus_newStatus']/../div/ul/li[2]/a] and operate it
+2014-10-11 16:12:37 [TestNG]-[INFO] founded the element [By.xpath: //button[text()='confirm']] and operate it
+2014-10-11 16:12:37 [TestNG]-[INFO] founded the element [By.xpath: //table[@class='table table-bordered table-striped']/tbody/tr[1]/td[7]] and operate it
+2014-10-11 16:12:37 [TestNG]-[INFO] Expected [Live] and founded [Live]
+2014-10-11 16:12:37 [TestNG]-[INFO] updateStatus test case runs successfully
+2014-10-11 16:12:38 [TestNG]-[INFO] Passed= updateStatus
