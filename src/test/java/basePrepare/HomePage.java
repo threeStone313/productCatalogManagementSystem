@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 
 import basePrepare.autoMan;
 
-public class HomePage extends autoMan{
+public class HomePage {
 	public static Logger logger = Logger.getLogger(HomePage.class.getName());
 	public static final By searchBox=By.id("searchByNameOrId");
 	public static final String searchPrompt="placeholder";
@@ -29,7 +29,7 @@ public class HomePage extends autoMan{
 	public static final By valueBox3=By.id("item03_value");
 	public static final By valueBox4=By.id("item04_value");
 	public static final By textInValueBox=By.xpath("//ul[@class='dropdown-menu pull-right']//span[text()='Edit']");
-	public static final By selectValueOfVendor=By.xpath("//ul[@class='dropdown-menu pull-right']//li[13]/a");
+	public static final By selectValueOfVendor=By.xpath("//ul[@class='dropdown-menu pull-right search-list']//li[13]/a");
 	public static final By selectValueOfstatus=By.xpath("//input[@id='item02_value']/../div/ul/li[1]/a");
 	public static final By selectValueOfprimary=By.xpath("//input[@id='item03_value']/../div/ul/li[1]/a");
 	public static final By selectValueOfsecondary=By.xpath("//input[@id='item04_value']/../div/ul/li[2]/a");
@@ -45,11 +45,21 @@ public class HomePage extends autoMan{
 	public static final By updateStatus=By.xpath("//button[@class='btn btn-primary upper j_updateStatus']");
 	public static final By tipsOnPopUp=By.className("modal-body");
 	public static final By confirmOnPopUp=By.xpath("//button[text()='confirm']");
+	public static final By cancelOnPopUp=By.xpath("//button[text()='cancel']");
 	public static final By selectAll=By.className("j_selectAll");
 	public static final By statusBox=By.id("ProductStatus_newStatus");//update status modal上面
 	public static final By selectStatus=By.xpath("//input[@id='ProductStatus_newStatus']/../div/ul/li[2]/a");
 	public static final By productStatus=By.xpath("//table[@class='table table-bordered table-striped']/tbody/tr[1]/td[7]");
-  public static String searchPrompt() {//输入框内的提示
+	public static final By addNew=By.xpath("//button[@class='btn btn-primary upper j_addProd']");
+	public static final By ComponentTab=By.xpath("//a[text()='COMPONENT']");
+	public static final By searchFieldInComponentTab=By.id("searchByName");
+	public static final By searchButtonInComponentTab=By.xpath("//button[@class='btn btn-primary upper j_searchCategory']");
+	public static final By OptionCategoryDescription=By.xpath("//td[@class='opt-ctrler col-md-10 opt-name']");
+	public static final By deleteOptionIcon=By.xpath("//span[text()='delete option']");
+	public static final By confirmInDeleteOption=By.xpath("//button[@class='btn btn-primary upper j_ok']");
+	public static final By HomeTab=By.xpath("//a[text()='HOME']");
+	
+	public static String searchPrompt() {//输入框内的提示
 	  String a=autoMan.getElement(searchBox).getAttribute(searchPrompt);
 	  return a;
   }

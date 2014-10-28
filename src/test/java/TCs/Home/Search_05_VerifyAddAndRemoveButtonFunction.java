@@ -12,9 +12,9 @@ public class Search_05_VerifyAddAndRemoveButtonFunction extends prepare{
   public void AddAndRemove() {
 	  autoMan.getElement(HomePage.firstPlus).click();
 	  autoMan.trueEquals(HomePage.secondPlus);
-	  int a=autoMan.getElements(By.xpath("//button[@class='btn bbf-add btn-info']")).size();
+	  int a=driver.findElements(By.xpath("//button[@class='btn bbf-add btn-info']")).size();
 	  autoMan.getElement(HomePage.firstDel).click();
-	  int b=autoMan.getElements(By.xpath("//button[@class='btn bbf-add btn-info']")).size();
+	  int b=driver.findElements(By.xpath("//button[@class='btn bbf-add btn-info']")).size();
 	  autoMan.numberEquals(a-1, b);
 	 
   }

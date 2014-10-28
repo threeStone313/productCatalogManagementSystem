@@ -20,7 +20,13 @@ public class Search_09_SelectAllproductInCurrentPageToUpdateTheirStatusAndCancel
 	  autoMan.getElement(HomePage.statusBox).click();
 	  autoMan.getElement(HomePage.selectStatus).click();
 	  autoMan.getElement(HomePage.confirmOnPopUp).click();
+	  autoMan.sleep(1000);
 	  autoMan.textEquals("Live",autoMan.getElement(HomePage.productStatus).getText());
+	  autoMan.getElement(HomePage.updateStatus).click();
+	  autoMan.getElement(HomePage.cancelOnPopUp).click();
+	  autoMan.sleep(1000);
+	  autoMan.textEquals("Live",autoMan.getElement(HomePage.productStatus).getText());
+	  
 	  
   }
 }
