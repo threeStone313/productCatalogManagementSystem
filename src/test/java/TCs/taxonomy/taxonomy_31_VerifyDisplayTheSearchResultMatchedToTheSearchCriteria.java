@@ -10,7 +10,6 @@ import basePrepare.taxonomy;
 public class taxonomy_31_VerifyDisplayTheSearchResultMatchedToTheSearchCriteria extends prepare{
   @Test
   public void SearchResultMatched() {
-	  autoMan.sleep(3000);
 	  autoMan.getElement(taxonomy.taxonomyTab).click();
 	  autoMan.getElement(taxonomy.searchField).sendKeys("CTC185");
 	  autoMan.getElement(taxonomy.goSearchButton).click();

@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 public class taxonomy {
 	public static Logger logger = Logger.getLogger(basicInfo.class.getName());
-	public static final By taxonomyTab=By.xpath("//a[text()='TAXONOMY']");
+	public static final By taxonomyTab=By.linkText("TAXONOMY");
 	public static final By searchField=By.id("searchByCategoryName");
 	public static final By goSearchButton=By.xpath("//button[text()='go']");
 	public static final By taxonomyName1=By.id("s-2");
@@ -17,4 +17,7 @@ public class taxonomy {
 	public static final By delAfterRightClick=By.className("j_del");
 	public static final By confirmToDelete=By.xpath("//button[@class='btn btn-primary upper j_ok']");
 	public static final By cancel=By.xpath("//button[@class='btn btn-default upper j_cancel']");
+	public static final By editNextToCategoryName=By.xpath("//div[@class='col-sm-1 text-left']//a[@class='j_edit']");
+	public static final By editModal=By.className("modal-body");
+
 }

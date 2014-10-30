@@ -10,7 +10,6 @@ import basePrepare.taxonomy;
 public class taxonomy_34_CancelTheAddoperationForATaxonomy extends prepare{
   @Test
   public void CancelTheAddoperation() {
-	  autoMan.sleep(3000);
 	  autoMan.getElement(taxonomy.taxonomyTab).click();
 	  autoMan.rightClick(taxonomy.taxonomyName1);
 	  autoMan.getElement(taxonomy.addAfterRightClick).click();

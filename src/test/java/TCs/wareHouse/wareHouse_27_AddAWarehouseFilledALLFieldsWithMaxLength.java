@@ -20,5 +20,7 @@ public class wareHouse_27_AddAWarehouseFilledALLFieldsWithMaxLength extends prep
 	  autoMan.textEquals("1234567890",autoMan.executeJS(false,"WareVariant_variant_variantInfo_Inventory"));
 	  autoMan.textEquals("false",autoMan.executeJS(true, "return (document.getElementById('BOM_BOMInfo_IsPrimaryRouting').checked).toString()"));
 	  autoMan.textEquals("false",autoMan.executeJS(true, "return (document.getElementById('BOM_BOMInfo_IsBackflushItem').checked).toString()"));
+  
+  
   }
 }
