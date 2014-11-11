@@ -51,7 +51,16 @@
 				<version>2.1</version>
 				<type>maven-plugin</type>
 			</dependency>
-			
+			 <dependency>
+				<groupId>org.sikuli</groupId>
+				<artifactId>sikuli-api</artifactId>
+				<version>LATEST</version>
+			</dependency>
+			<dependency>
+				<groupId>org.sikuli</groupId>
+				<artifactId>sikuli-core</artifactId>
+				<version>LATEST</version>
+			</dependency>		
 	  </dependencies>
 	  <build>
 	      		<sourceDirectory>src/test/java</sourceDirectory>

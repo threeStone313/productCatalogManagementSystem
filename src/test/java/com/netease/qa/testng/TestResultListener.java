@@ -1,6 +1,10 @@
 package com.netease.qa.testng;
 
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,6 +12,8 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+
+import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
@@ -140,9 +146,11 @@ public class TestResultListener extends TestListenerAdapter {
             File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
             filePath = "result/screenshot/" + fileName + ".jpg";
             File destFile = new File(filePath);
+            Boolean a=this.narrowAndFormateTransfer(screenshot);
+            if(a){
             FileUtils.copyFile(screenshot, destFile);
             logger.info(fileName+"screenshot successfully,saved"+"[ "+filePath+" ]");
-
+            }
         } catch (Exception e) {
                 filePath = fileName + " ,screenshot failed saved,the reason:" + e.getMessage();
                 logger.error(filePath);
@@ -155,5 +163,22 @@ public class TestResultListener extends TestListenerAdapter {
              Reporter.log("<img src=\"../../" + filePath + "\"/>");
         }
  }
+    public Boolean narrowAndFormateTransfer(File srcfile) {//将截图等比缩小 便于查看
+    	Boolean flag = null;
+        try {
+            BufferedImage src = ImageIO.read(srcfile); // 读入文件
+            int wide=src.getWidth();
+            int high=src.getHeight();
+           // Image image = src.getScaledInstance(width, height, Image.SCALE_DEFAULT);
+            BufferedImage  tag = new BufferedImage(wide/2, high/2, BufferedImage.TYPE_INT_RGB);
+            Graphics g = tag.getGraphics();
+            g.drawImage(src,0,0, wide/2, high/2, null); // 绘制缩小后的图
+            g.dispose();
+          flag = ImageIO.write(tag, "JPG", new FileOutputStream(srcfile));// 输出到文件流
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return flag;
+    }
 
 }
